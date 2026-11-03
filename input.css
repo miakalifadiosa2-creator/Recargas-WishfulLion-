@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ink font-display text-lg text-slate-100;
+    background-image: radial-gradient(60rem 30rem at 85% -10%, #00e5ff22, transparent), radial-gradient(40rem 25rem at -10% 5%, #ff7a1822, transparent);
+  }
+}
+@layer components {
+  /* Botones con resplandor (glow) */
+  .btn { @apply rounded-xl px-5 py-3 font-bold tracking-wide transition duration-200 active:scale-95 disabled:opacity-40; }
+  .btn-cyan { @apply bg-neon-cyan text-ink shadow-[0_0_18px_#00e5ff80] hover:shadow-[0_0_34px_#00e5ffd0]; }
+  .btn-orange { @apply bg-neon-orange text-ink shadow-[0_0_18px_#ff7a1880] hover:shadow-[0_0_34px_#ff7a18d0]; }
+  /* Tarjetas: hover animado y estado seleccionado */
+  .card { @apply relative rounded-2xl border border-white/10 bg-white/5 p-3 transition duration-200 hover:-translate-y-1 hover:border-neon-cyan/60 hover:shadow-[0_0_24px_#00e5ff40]; }
+  .card-sel { @apply border-neon-orange shadow-[0_0_24px_#ff7a1899]; }
+  .inp { @apply w-full rounded-xl border border-white/15 bg-black/40 px-4 py-3 outline-none transition focus:border-neon-cyan focus:shadow-[0_0_14px_#00e5ff66]; }
+  .nav { @apply rounded-xl px-3 py-2 text-xl transition hover:bg-white/10 hover:text-neon-cyan; }
+}
+@keyframes up { from { opacity: 0; transform: translateY(10px); } }
+.fade { animation: up 0.35s ease both; }
+@media (prefers-reduced-motion: reduce) { .fade { animation: none; } }
+
+/* Detalles gamer */
+@layer components {
+  .hero { background-color: #0a1220; background-image: radial-gradient(40rem 20rem at 100% 0%, #00e5ff26, transparent), radial-gradient(30rem 18rem at 0% 100%, #ff7a1826, transparent), linear-gradient(#ffffff08 1px, transparent 1px), linear-gradient(90deg, #ffffff08 1px, transparent 1px); background-size: auto, auto, 32px 32px, 32px 32px; }
+  .chip { @apply inline-block rounded-md px-2 py-0.5 text-sm font-bold; }
+  .box { @apply rounded-2xl border border-white/10 bg-white/5 p-4; }
+  .glow-text { text-shadow: 0 0 28px #00e5ff55; }
+}
