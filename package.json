@@ -1,0 +1,21 @@
+{
+  "name": "wishfullion6770-recargas",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i frontend/src/input.css -o frontend/css/style.css --minify",
+    "postinstall": "npm run build:css",
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.0",
+    "pg": "^8.13.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "engines": { "node": ">=20 <27" }
+}

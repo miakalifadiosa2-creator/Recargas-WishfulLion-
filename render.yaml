@@ -1,0 +1,25 @@
+# Blueprint de Render: crea el servicio con un clic (New + → Blueprint → tu repositorio).
+services:
+  - type: web
+    name: wishfullion6770-recargas        # define el enlace: https://wishfullion6770-recargas.onrender.com
+    runtime: node
+    plan: free
+    region: ohio
+    buildCommand: npm install             # también compila Tailwind (postinstall)
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "1"
+      - key: JWT_SECRET
+        generateValue: true               # Render crea una clave aleatoria: tú no la escribes
+      - key: ADMIN_USER
+        value: WishfulLion6770
+      - key: ADMIN_PASSWORD
+        sync: false                       # Render te la pedirá al crear el Blueprint
+      - key: DATABASE_URL
+        sync: false                       # cadena de conexión de Neon (PostgreSQL)
