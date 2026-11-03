@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="Recargas de Free Fire, Mobile Legends, Arena Breakout y Blood Strike en Bolivianos. Paga con QR y sigue tu pedido.">
+  <title>WishfulLion6770 · Recargas de videojuegos</title>
+  <link rel="icon" href="/assets/logo.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="min-h-screen">
+  <!-- Header fijo: marca, búsqueda, moneda fija y navegación -->
+  <header class="sticky top-0 z-30 border-b border-white/10 bg-ink/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-3">
+      <a href="#/" class="flex items-center gap-2 text-xl font-bold tracking-wider text-neon-cyan">
+        <img src="/assets/logo.svg" alt="" class="h-9 w-9">WishfulLion6770</a>
+      <input id="q" type="search" aria-label="Buscar juego" placeholder="Buscar juego…" class="inp order-last w-full md:order-none md:w-64">
+      <select disabled title="Moneda" aria-label="Moneda" class="inp !w-auto !py-2"><option>BOB · Bs.</option></select>
+      <nav class="ml-auto flex">
+        <a href="#/" class="nav inline-flex items-center gap-1" title="Inicio" aria-label="Inicio"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8v10H3z"/></svg><span class="hidden text-base md:inline">Inicio</span></a>
+        <a href="#/pedidos" class="nav inline-flex items-center gap-1" title="Pedidos" aria-label="Pedidos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg><span class="hidden text-base md:inline">Pedidos</span></a>
+        <a href="#/torneos" class="nav inline-flex items-center gap-1" title="Torneos" aria-label="Torneos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v2a3 3 0 0 0 4 3M16 6h4v2a3 3 0 0 1-4 3M12 13v4M8 21h8"/></svg><span class="hidden text-base md:inline">Torneos</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="app" class="mx-auto max-w-6xl px-4 py-6"></main>
+  <footer class="mt-12 border-t border-white/10 px-4 py-8 text-center text-sm text-slate-400">
+    <div class="text-lg font-bold tracking-wider text-neon-cyan">WishfulLion6770</div>
+    <p class="mx-auto mt-2 max-w-2xl">Los nombres, logotipos e imágenes de los juegos pertenecen a sus respectivos dueños. WishfulLion6770 no está afiliado a sus desarrolladoras ni editoras.</p>
+  </footer>
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-4 left-1/2 z-50 -translate-x-1/2"></div>
+  <script src="/common.js" defer></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>
